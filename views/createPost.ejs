@@ -1,0 +1,131 @@
+<br>
+<br>
+<br>
+<div id="page">
+  <div class="container-wrap">
+
+     <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+
+      <!-- top bar-->
+      <%- include('./partials/topbar')%>
+
+      
+      <div class="row">
+          <!-- small nav side -->
+          <div class=" col-md-2 nav-side">
+            <div class="side-nav">
+              <%- include('./partials/sidebarNav') %>
+            </div>
+          </div>
+
+        
+          <!-- big side -->
+          <div class=" col-md-10 big-side">
+            <br>
+
+            <div class="">
+              <div class="row">
+                <div class="col-md-8">
+                  <form action="/report/createReport" method="post">
+                  
+                      <div class="form-group">
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">Line 1:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <input type="number" class="form-control" name="line1" />  
+                           </div>
+                        </div>
+                      </div>
+              
+  
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label for="line 2">Line 2:</label>
+                          </div>
+                          <div class="col-md-4">
+                              <input type="number" class="form-control" name="line2" 
+                            />                    
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label for="line 3">Line 3:</label>
+                          </div>
+                          <div class="col-md-4">
+                              <input type="number" class="form-control" name="line3" 
+                            />                    </div>
+                        </div>
+                      </div>
+                   
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label for="line 4">Line 4:</label>
+                          </div>
+
+                          <div class="col-md-4">
+                              <input type="number" class="form-control" name="line4" 
+                            />   
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label for="">INK :</label>
+                          </div>
+                          <div class="col-md-4">
+                              <input type="number" class="form-control" name="ink"/>                          
+                          </div>
+                        </div>
+                      </div>
+  
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label for="line 2">Solvent:</label>
+                          </div>
+                          <div class="col-md-4">
+                              <input type="number" class="form-control" name="solvent" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+
+                          </div>
+                          <div class="col-md-4">
+                            <input type="submit" value="Submit"  class="login-btn " />
+                          </div>
+                        </div>
+                      </div>
+
+                      <br>
+  
+
+                     
+
+                      
+                </form>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+      </div>
+
+      <%- include('./partials/footer') %>
+  </div>
+</div>

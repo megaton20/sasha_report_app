@@ -1,0 +1,118 @@
+<br />
+<br />
+<br />
+<div id="page">
+  <div class="container-wrap">
+    <div class="alert-top"><%- include ('./partials/messages') %></div>
+
+    <!-- top bar-->
+    <%- include('./partials/topbar')%>
+
+    <div class="row">
+      <!-- small nav side -->
+      <div class="col-md-2 nav-side">
+        <div class="side-nav"><%- include('./partials/sidebarNav') %></div>
+      </div>
+
+      <!-- big side -->
+      <div class="col-md-10 big-side">
+  
+
+        <div class="reflection">
+          <div class="row">
+             <div class="reflection-card col-md-8">
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>line 1:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['line_1'] %></p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>line 2:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['line_2'] %></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>line 3:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['line_3'] %></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>line 4:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['line_4'] %></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>ink:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['ink'] %>  (ltrs)</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>Solvent:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['solvent'] %>  (ltrs)</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>Total:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['total'] %> Printed</p>
+                </div>
+              </div>
+            </div>
+            <div class=" reflection-card col-md-4">
+              <!-- buttons -->
+              <div class="col-md-4">
+                <form action="/report/delete/<%= data[0]['id'] %>" method="POST">
+                  <input type="hidden" name="_method" value="DELETE" />
+                  <button style="color: red;"><i class="icon-bin" ></i>Delete</button>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <a href="/report/edit/<%= data[0]['id'] %>"> <button style="color: #6db3e8;"> <i class="icon-pen"></i>Edit</button></a>
+              </div>
+              <div class="col-md-2">
+                <a href="/report/"> <button  > <i class="icon-books"></i>Reports</button></a>
+              </div>
+              <!-- buttons ends here -->
+              <br>
+              <hr>
+              <p>Month: <%= data[0]['month']%> </p>
+              <p>Day: <%= data[0]['day']%> </p>
+              <p>Time: <%= data[0]['createdTime']%> </p>
+              <p>Date:<%= data[0]['createdDate'] %> </p>
+              <p>Posted by: <%= data[0]['full_name']%></p>
+
+          
+            </div>
+
+           
+          </div>
+
+      
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </div>
+</div>

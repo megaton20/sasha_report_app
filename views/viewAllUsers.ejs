@@ -1,0 +1,114 @@
+<div id="page">
+  <!-- navbar  -->
+  <nav class="fh5co-nav" role="navigation">
+    <div class="container-wrap">
+      <div class="top-menu">
+        <div class="row">
+          <div class="col-md-12 col-offset-0 text-center">
+            <%- include ('./partials/logo') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar ends here -->
+
+  <div class="container-wrap">
+    <div id="fh5co-about">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="uperside">
+            <div class="profile">
+              <i class="icon-user2"></i>
+            </div>
+            <div class="details">
+               <p>
+                   <%=['Author']%> <br>
+               </p>
+               
+            </div>
+          </div>
+          <hr class="mb-4 shift-dp" />
+          <div class="side-nav">
+            <%- include('./partials/sidebarNav') %>
+          </div>
+        </div>
+
+        
+        <div class="col-md-10 about ">
+          <div class="row "style="float:right">
+            <div class="col-md-4">   
+              <a href="#"><i class="icon-book2"></i></a></div>
+            <div class="col-md-4">  
+              <a href="#"> <i class="icon-plus2"></i></a>
+            </div>
+            <div class="col-md-4">  
+              <a href="#"> <i class="icon-user2"></i></a>
+            </div>
+          </div>
+          <h4 class="heading">Users</h4>
+          <hr>
+
+              
+          <div class="my-table">
+            <table class="table table-dark table-stribe table-bordered table-hover" id="customers">
+                <thead>
+                    <tr class="">
+    
+                        <th class="table-row">id</th>
+                        <th class="table-row">email</th>
+                        <th class="table-row">password</th>
+                        <th class="table-row">Date</th>
+                        <th class="table-row">Action</th>
+                
+                    </tr>
+                    
+                </thead>
+                <% data.forEach(function(dc){ %>
+                    <tr class="">
+                        <td>
+                            <%= dc['id']%>
+                        </td>
+                        <td>
+                            <%= dc['email']%>
+                        </td>
+                        <td>
+                            <%= dc['password']%>
+                        </td>
+                        <td>
+                            <%= dc['date']%>
+                        </td>
+                        <td>
+                            <form method="post" action="/admin/user/<%= dc['id'] %>">
+                                <!-- <a href="#" type="submit"><i class="fa-solid fa-rotate"></i></a> -->
+                                <input class="my-button" type="submit" name="delete" value='Delete' onClick="return confirm('Are you sure you want to delete?')" />
+                                <input type="hidden" name="_method" value="DELETE" />
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+                </table>
+        </div>
+          <div class="pagination">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="row">
+                          <div class="col-md-4"> <a href="<%= previousPage %>"
+                              > <i class="icon-arrow-left3" style="color: #504d4d;"></i
+                            ></a></div>
+                            <div class="col-md-4">...</div>
+                          <div class="col-md-4"> <a href="<%= nextPage %>"
+                              > <i class="icon-arrow-right3"></i
+                            ></a></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include ('./partials/footer') %>
+  </div>
+</div>

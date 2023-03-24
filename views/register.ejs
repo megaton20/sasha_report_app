@@ -1,0 +1,132 @@
+<br>
+<br>
+<br>
+<div id="page">
+  <div class="container-wrap">
+
+     <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+
+      <!-- top bar-->
+    <%- include('./partials/topbar')%>
+
+    <div class="row">
+      <!-- small nav side -->
+      <div class=" col-md-2 nav-side">
+        <div class="side-nav">
+          <%- include('./partials/sidebarNavAdmin') %>
+        </div>
+      </div>
+
+      <!-- big side -->
+      <div class=" col-md-10 big-side">
+
+        <br>
+        <br>
+        <div class="row login-form">
+    
+          <div class="col-md-7">
+            
+              <div class="row">
+                  <div class="col-md-12  animate-box">
+                      <div class="row">
+                          <form action="/admin/signup" method="post">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                      <input type="email" class="form-control" name="email" placeholder="Enter registered Email" />
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                      <input type="phone" class="form-control" name="phone" placeholder="Enter valid phone number" />
+                                  </div>
+                                </div>
+                             
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <input type="password" class="form-control" name="password" placeholder="enter password" />
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <input type="password" class="form-control" name="password2" placeholder="confirm password" />
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" name="firstName" placeholder="First Name" />
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" name="lastName" placeholder="Last Name" />
+                                  </div>
+                                </div>
+                       
+  
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                      <select name="state" id="slct1" class="form-control" onchange="populate(this.id, 'slct2')">
+                                        <option value="" selected>Choose State</option>
+                                          <option value="Abuja">Abuja</option>
+                                          <option value="Akwa Ibom">Akwa Ibom</option>
+                                          <option value="Cross River">Cross River</option>
+                                          <option value="Lagos">Lagos</option>
+                                          <option value="Port Harcourt">Port Harcourt</option>
+                              
+                                      </select>
+                                  </div>
+                                </div>
+  
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                      <select name="LGA" id="slct2" class="form-control">
+                                        <option value="Cross river"> LGA</option>
+                                 
+                                      </select>
+                                  </div>
+                                </div> 
+  
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                      <select name="gender" id="" class="form-control"> 
+                                        <option  >gender </option>
+                                        <option >Male </option>
+                                        <option >Female </option>
+                                      </select>
+                                  </div>
+                                </div>
+                          
+                                <div class="col-md-12">
+                                  <div class="form-group">
+                                    <input
+                                      type="submit"
+                                      value="Register"
+                                      class="login-btn "
+                                    />
+                                  </div>
+                                </div>
+                                
+                          </form>
+                      </div>
+                    </div>
+                 
+                </div>
+          </div>
+  
+         
+        </div>
+     
+
+      </div>
+
+  </div>
+  
+
+<br>
+      <%- include('./partials/footer') %>
+
+
+  </div>
+</div>

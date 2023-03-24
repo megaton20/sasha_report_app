@@ -1,0 +1,70 @@
+
+
+
+
+<br>
+<br>
+
+
+
+<div id="page">
+  <div class="container-wrap">
+    <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+    <div id="fh5co-contact" >
+      <div class="row animate-box">
+        <div class="col-md-6 col-md-offset-3 text-center fh5co-heading" style="margin-bottom: 10px;">
+          <h4> Sasha </h4>
+          <p>Welcome back! enter your login information to continue using our resources</p>
+        </div>
+      </div>
+
+      
+      <div class="row login-form">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12  animate-box">
+                    <div class="row">
+                        <form action="/auth/login" method="post">
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="email" placeholder="Enter registered Email" />
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <input type="password" class="form-control" name="password" placeholder="Enter your password" />
+                                </div>
+                              </div>
+                        
+                              <br>
+                              <div class="col-md-12">
+                                <div class="">
+                                  <input
+                                    type="submit"
+                                    value="Login"
+                                    class="login-btn "
+                                  />
+                                </div>
+                              </div>
+                              
+                        </form>
+                    </div>
+                  </div>
+               
+              </div>
+        </div>
+
+       
+      </div>
+
+      <br>
+      <div class="col-md-6 col-md-offset-3 text-center fh5co-heading row">
+        <p class="col-md-6"> <a href="/forget"> Forget password </a> </p>
+      </div>
+    </div>
+
+  </div>
+</div>

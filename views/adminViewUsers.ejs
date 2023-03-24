@@ -1,0 +1,119 @@
+<br>
+<br>
+<br>
+<div id="page">
+  <div class="container-wrap">
+
+     <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+
+      <!-- top bar-->
+      <%- include('./partials/topbar')%>
+
+      
+      <div class="row">
+          <!-- small nav side -->
+          <div class=" col-md-2 nav-side">
+            <div class="side-nav">
+              <%- include('./partials/sidebarNavAdmin') %>
+            </div>
+          </div>
+
+          <br>
+          <!-- big side -->
+          <div class=" col-md-10 big-side">
+
+              <!-- CONTENT -->
+            <div class="row">
+              <div class="row animate-box">
+                <div class="my-container ">
+
+                  <div class="row">
+                            
+                    <div class="col-md-12">
+                      <p style="margin: 0;">Record of users</p>
+                      <div class="my-container reports-page">
+                        <div class="my-table">
+                          <table class="table table-dark table-stribe table-bordered table-hover" id="customers">
+                            <thead>
+                                <tr class="">
+        
+        
+        
+                                    <th class="table-row">s/n</th>
+                                    <th class="table-row">email</th>
+                                    <th class="table-row">phone</th>
+                                    <th class="table-row"> first name</th>
+                                    <th class="table-row">last name</th>
+                                    <th class="table-row"> gender</th>
+                                    <th class="table-row"> state</th>
+                                    <th class="table-row">lga</th>
+                                    <th class="table-row">View</th>
+        
+                            
+                                </tr>
+                                
+                            </thead>
+                            <% data.forEach(function(con){ %>
+                                <tr class="">
+                                    <td>
+                                        <%= con['sn']%>
+                                    </td>
+                                    <td>
+                                        <%= con['email']%>
+                                    </td>
+                                
+                                    <td>
+                                        <%= con['phone']%>
+                                    </td>
+                                    <td>
+                                        <%= con['first_name']%>
+                                    </td>
+                                    <td>
+                                        <%= con['last_name']%>
+                                    </td>
+                                    <td>
+                                        <%= con['gender']%>
+                                    </td>
+                                    <td>
+                                        <%= con['state']%>
+                                    </td>
+                                    <td>
+                                        <%= con['lga']%>
+                                    </td>
+                                    <td>
+                                        <a href="/admin/user/<%= con['id'] %>"> <i class="icon-book"></i></a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                            </table>
+                          </div>
+                       
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-offset-3">
+                <p>
+                  this app was developed by Adariku Micheal Akwaji
+                  </p>
+              </div>
+            </div>
+
+      
+
+          </div>
+
+      </div>
+
+
+
+      <%- include('./partials/footer') %>
+
+
+  </div>
+</div>

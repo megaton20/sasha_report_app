@@ -1,0 +1,128 @@
+<br>
+<br>
+<br>
+<div id="page">
+  <div class="container-wrap">
+
+     <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+
+      <!-- top bar-->
+      <%- include('./partials/topbar')%>
+
+      
+      <div class="row">
+          <!-- small nav side -->
+          <div class=" col-md-2 nav-side">
+            <div class="side-nav">
+              <%- include('./partials/sidebarNav') %>
+            </div>
+          </div>
+
+          <br>
+          <!-- big side -->
+          <div class=" col-md-10 big-side">
+
+              <!-- CONTENT -->
+            <div class="row">
+              <div class="row animate-box">
+                <div class="my-container ">
+
+                  <div class="row">
+                      <div class="col-md-4">
+                     <div class="profile-card">
+                       <div class="profile">
+
+                      </div>
+                      <br>
+                      <button class="btn">Upload</button>
+                     </div>
+                  
+                    </div>
+                    <div class="col-md-8">
+                      <div class="profile-card">
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">Name:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <%= user['first_name']%>  <%= user['last_name']%> 
+                           </div>
+                        </div>
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">email:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <%= user['email']%>  
+                           </div>
+                        </div>
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">phone:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <%= user['phone']%> 
+                           </div>
+                        </div>
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">Gender:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <%= user['gender']%> 
+                           </div>
+                        </div>
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">state:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <%= user['state']%>
+                           </div>
+                        </div>
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">LGA:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <%= user['lga']%>
+                           </div>
+                        </div>
+                        <div class=" row">
+                          <div class="col-md-2">
+                            <label for="line 1">Plant:</label>
+                          </div>
+                            <div class="col-md-4">
+                              <%= user['plant']%> 
+                           </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-offset-3">
+                <p>
+                  this app was developed by Adariku Micheal Akwaji
+                  </p>
+              </div>
+            </div>
+
+      
+
+          </div>
+
+      </div>
+
+
+
+      <%- include('./partials/footer') %>
+
+
+  </div>
+</div>

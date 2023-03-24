@@ -1,0 +1,63 @@
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+<div id="page">
+  <div class="container-wrap">
+    <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+    <div id="fh5co-contact" >
+      <div class="row animate-box">
+        <div class="col-md-6 col-md-offset-3 text-center fh5co-heading" style="margin-bottom: 10px;">
+          <p>Sorry! enter your email to recieve verification code</p>
+        </div>
+      </div>
+
+      
+      <div class="row login-form">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12  animate-box">
+                    <div class="row">
+                        <form action="/auth/forget" method="post">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="email" placeholder="Enter recovery Email" />
+                                </div>
+                              </div>
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <input
+                                    type="submit"
+                                    value="Send"
+                                    class="login-btn "
+                                  />
+                                </div>
+                              </div>
+                              
+                        </form>
+                    </div>
+                  </div>
+               
+              </div>
+        </div>
+
+       
+      </div>
+
+      <div class="col-md-6 col-md-offset-3 text-center fh5co-heading row">
+        <p class="col-md-6"> <a href="/register">click here</a> to Sign up</p>
+        <p class="col-md-6"> <a href="/"> Sign in </a> </p>
+      </div>
+    </div>
+
+
+  </div>
+</div>

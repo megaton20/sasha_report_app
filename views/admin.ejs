@@ -1,0 +1,155 @@
+<br>
+<br>
+<br>
+<div id="page">
+  <div class="container-wrap">
+
+     <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+
+      <!-- top bar-->
+    <%- include('./partials/topbar')%>
+
+      
+      <div class="row">
+          <!-- small nav side -->
+          <div class=" col-md-2 nav-side">
+            <div class="side-nav">
+              <%- include('./partials/sidebarNavAdmin') %>
+            </div>
+          </div>
+
+          <!-- big side -->
+          <div class=" col-md-10 big-side">
+            <%if(sum == 0) { %>
+              <!-- if report is less than zero page -->
+
+                 <div class="row">
+              <div class="row animate-box">
+                <div class="col-md-6 col-md-offset-2 text-center fh5co-heading">
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+
+                  
+                  <h2 class="heading">No Reports was Entered For The Month of <%= month %></h2>
+                    <p> No reports has been made this month!
+                  </p>
+                </div>
+              </div>
+
+            </div>
+       
+              
+
+              <!-- if report is less than zero page -->
+
+              <% } else { %>
+                <br>
+                <p style="margin: 0;">Records for <%= data[0]['month']%> </p>
+                <div class="my-container reports-page">
+
+                  <div class="my-table">
+                  <table class="table table-dark table-stribe table-bordered table-hover" id="customers">
+                    <thead>
+                        <tr class="">
+
+
+
+                            <th class="table-row">DATE</th>
+                            <th class="table-row">Time</th>
+                            <th class="table-row">User</th>
+                            <th class="table-row">LINE 1</th>
+                            <th class="table-row">LINE 2</th>
+                            <th class="table-row">LINE 3</th>
+                            <th class="table-row">LINE 4</th>
+                            <th class="table-row">INK</th>
+                            <th class="table-row">SOLVENT</th>
+                            <th class="table-row">TOTAL</th>
+                            <th class="table-row">Action</th>
+
+                    
+                        </tr>
+                        
+                    </thead>
+                    <% data.forEach(function(dc){ %>
+                        <tr class="">
+
+                            <td>
+                                <%= dc['createdDate']%>
+                            </td>
+                            <td>
+                                <%= dc['createdTime']%>
+                            </td>
+                            <td>
+                                <%= dc['full_name']%>
+                            </td>
+                            <td>
+                                <%= dc['line_1']%>
+                            </td>
+                            <td>
+                                <%= dc['line_2']%>
+                            </td>
+                            <td>
+                                <%= dc['line_3']%>
+                            </td>
+                            <td>
+                              <%= dc['line_4']%>
+                            </td>
+                            <td>
+                              <%= dc['ink']%>
+                            </td>
+                            <td>
+                              <%= dc['solvent']%>
+                            </td>
+                            <td>
+                              <%= dc['total']%>
+                            </td>
+                            <td>
+                                <a href="/report/reflection/<%= dc['id'] %>"> <i class="icon-book"></i></a>
+                            </td>
+                        </tr>
+                    <% }) %>
+                    </table>
+                  </div>
+ 
+                </div>
+                
+                <div class="total-sum">
+                  <%if(sum <= 20000) { %>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Total Printed: <span style="color: #e35252;"><%= sum%> </span></p> 
+                      </div>
+                    </div>
+                   
+                  <% } else { %>
+                     <div class="row">
+                      <div class="col-md-12">
+                        <p>Total Printed: <span style="color: var(--primary-color);"><%= sum%> </span></p> 
+
+                      </div>
+                    </div>
+
+                  <%} %>
+                </div>
+                <% } %>
+              <!-- if report has more than zero item else ends -->
+               <!-- content -->
+         
+         
+
+          </div>
+
+      </div>
+
+<br>
+      <%- include('./partials/footer') %>
+
+
+  </div>
+</div>

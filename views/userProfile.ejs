@@ -1,0 +1,117 @@
+<br />
+<br />
+<br />
+<div id="page">
+  <div class="container-wrap">
+    <div class="alert-top"><%- include ('./partials/messages') %></div>
+
+    <!-- top bar-->
+    <%- include('./partials/topbar')%>
+
+    <div class="row">
+      <!-- small nav side -->
+      <div class="col-md-2 nav-side">
+        <div class="side-nav"><%- include('./partials/sidebarNavAdmin') %></div>
+      </div>
+
+      <!-- big side -->
+      <div class="col-md-10 big-side">
+        <br>
+        <div class="col-md-6">
+          <form action="/admin/delete/<%= data[0]['id'] %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE" />
+            <button style="color: red;"><i class="icon-bin" ></i>Delete</button>
+          </form>
+        </div>
+        <br>
+        <div class="reflection">
+          <div class="row">
+             <div class="reflection-card col-md-8">
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>Full Name: </h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= fullName%> </p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>Email:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['email'] %></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>Phone:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['phone'] %></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>state:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['state'] %></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>plant:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['lga'] %> </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>gender:</h4>
+                </div>
+                <div class="report-results col-md-6">
+                  <p><%= data[0]['gender'] %> </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>password:</h4>
+                </div>
+                <div class="report-results col-md-8">
+                  <p><%= data[0]['password'] %></p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="report-header col-md-2">
+                  <h4>SN:</h4>
+                </div>
+                <div class="report-results col-md-8">
+                  <p><%= data[0]['id'] %></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class=" reflection-card col-md-4">
+     
+              <div class="profile"></div>
+
+          
+            </div>
+
+
+    
+           
+          </div>
+
+      
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/footer') %>
+  </div>
+</div>

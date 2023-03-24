@@ -1,0 +1,127 @@
+<br>
+<br>
+<br>
+<div id="page">
+  <div class="container-wrap">
+
+     <div class="alert-top">
+      <%- include ('./partials/messages') %>
+    </div>
+
+      <!-- top bar-->
+      <%- include('./partials/topbar')%>
+
+      
+      <div class="row">
+          <!-- small nav side -->
+          <div class=" col-md-2 nav-side">
+            <div class="side-nav">
+              <%- include('./partials/sidebarNav') %>
+            </div>
+          </div>
+
+        
+          <!-- big side -->
+          <div class=" col-md-10 big-side">
+            <br>
+            <br>
+
+            <div class="row">
+              <div class="col-md-10">
+               
+                <form action="/report/update/<%= data[0]['id']%>" method="POST" enctype="application/x-www-form-urlencoded">
+                  
+                  <div class="report-form-group">
+                    <div class=" row">
+                      <div class="col-md-2">
+                        <label for="line 1">Line 1:</label>
+                      </div>
+                        <div class="col-md-4">
+                          <input type="number" class="report-form-control" name="line1" value="<%= data[0]['line_1']%>" placeholder="LINE 1" />
+                        </div>
+                    </div>
+                  </div>
+          
+
+                  <div class="report-form-group">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label for="line 2">Line 2:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <input type="number" class="report-form-control" name="line2" value="<%= data[0]['line_2']%>" placeholder="LINE 2" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="report-form-group">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label for="line 3">Line 3:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <input type="number" class="report-form-control" name="line3" value="<%= data[0]['line_3']%>" placeholder="LINE 3" />
+                      </div>
+                    </div>
+                  </div>
+               
+                  <div class="report-form-group">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label for="line 4">Line 4:</label>
+                      </div>
+
+                      <div class="col-md-4">
+                          <input type="number" class="report-form-control" name="line4" value="<%= data[0]['line_4']%>" placeholder="LINE 4" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="report-form-group">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label for="">INK :</label>
+                      </div>
+                      <div class="col-md-4">
+                          <input type="number" class="report-form-control" name="ink" value="<%= data[0]['ink']%>" placeholder="INK (LITRES)" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="report-form-group">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label for="line 2">Solvent:</label>
+                      </div>
+                      <div class="col-md-4">
+                          <input type="number" class="report-form-control" name="solvent" value="<%= data[0]['solvent']%>" placeholder="SOLVENT (LITRES)" />
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                    <div class="report-form-group">
+                      <div class="row">
+                        <div class="col-md-2">
+
+                        </div>
+                        <div class="col-md-4">
+                          <input type="hidden" name="_method" value="PUT">
+                          <input name="_method" type="submit" value="Update" class="login-btn "/>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  
+            </form>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <%- include('./partials/footer') %>
+  </div>
+</div>
